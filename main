@@ -1,0 +1,32 @@
+from tkinter import *
+
+
+def change():
+    ans = float(value.get()) * 1.609
+    answer.config(text=ans)
+
+
+window = Tk()
+window.minsize(width=150, height=150)
+window.config(padx=30, pady=75)
+
+# title = Label(text="Miles to Kilometer Converter", font=("Times New Romen", 20, "bold"))
+# title.config(pady=30)
+Km = Label(text="Kilometer")
+miles = Label(text="miles")
+convert = Button(text="Calculate", command=change)
+answer = Label(text=0)
+equals = Label(text="is equal to")
+value = Entry(width=10)
+
+
+# title.grid(row=0, column=1)
+miles.grid(row=1, column=2)
+value.grid(row=1, column=1)
+convert.grid(row=3, column=1)
+Km.grid(row=2, column=2)
+answer.grid(row=2, column=1)
+equals.grid(row=2, column=0)
+
+
+window.mainloop()
